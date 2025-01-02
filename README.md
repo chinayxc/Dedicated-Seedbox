@@ -1,28 +1,27 @@
-[中文Readme](https://github.com/jerry048/Dedicated-Seedbox/blob/main/README-zh.md)
-# !! ALERT
-BBR v3 is currently unavailable
-## Supported Platform
-	1. OS
+# !! 注意
+BBR v3 不可用
+## 支持的平台
+	1. OS 操作系统
 		1. Debian 10+
 		2. Ubuntu 20.04+
 	
-	2. CPU Architecture
+	2. CPU 类型
 		1. x86_64
 		2. ARM64
-## Functions
-###### 1. Seedbox Environment
-	1. qBittorrent
-	2. autobrr
-	3. vertex
-	4. autoremove-torrents
+## 可选功能
+###### 1. 盒子环境
+	1. qBittorrent   qb下载器
+	2. autobrr       外站常用
+	3. vertex       VT刷流
+	4. autoremove-torrents   自动删种,外站常用
 
-###### 2. System Tunning
-	CPU Optimization
-	Network Optimization
-	Kernel Values
-	Drive Optimization
-	BBRv3 or BBRx
- ### Fine Tunning Note
+###### 2. 系统优化
+	CPU Optimization 处理器优化
+	Network Optimization 网络优化
+	Kernel Values 内核参数调整
+	Drive Optimization 硬盘优化
+	BBRv3 or BBRx 开启BBRv3或者BBRx
+ ### 一些进阶操作优化等等
 - The Cache size should be set to around 1/4 of the machine total available ram. In case you opt for qBittorrent 4.3.x, you need to take account into memory leakage and set it to 1/8. 
 
 - aio_threads default setting is 4 and should be good for HDD. For SSD or even NVMe server, you might consider increase it to 8 or even 16. 
@@ -55,29 +54,29 @@ autoremove-torrents - https://github.com/jerrymakesjelly/autoremove-torrents
 
 BBR Install - https://github.com/KozakaiAya/TCP_BBR
 
-# Seedbox Installation Script
-## Usage
-`bash <(wget -qO- https://raw.githubusercontent.com/jerry048/Dedicated-Seedbox/main/Install.sh) -u <自定义用户名> -p <自定义密码> -c <缓存大小(unit:MiB最低1,之后安装完成建议调成-1)> -q <qBittorrent版本> -l <libtorrent版本> -b -v -r -3 -x -o`
-#### Options
-	1. -u: username 用户名
-	2. -p: password 密码
-	3. -c: Cache size for torrent client  缓存大小
-	4. -q: qBittorrent versions  qb版本
-	5. -l: libtorrent versions    lib版本
-	6. -b: Install autobrr    安装autobrr
-	7. -v: Install vertex     安装vertex
-	8. -r: Install autoremove-torrents  安装autoremove-torrents自动删种
-	9. -3: Enable BBR V3    安装BBR V3暂时不要加貌似失效了
-	10.-x: Enable BBRx      安装BBRx
-	11. Customize ports     自定义端口 不加就是默认8080
-##### Explanation
-	1. username is sgws
-	2. password is sgws6036
-	3. Cache size is 1
-	4. Install qBittorrent 4.3.8 - libtorrent-v1.2.19
-	5. Install autobrr
-	6. Install autoremove-torrents
-	7. Enable BBRx
- #### Example
-`bash <(wget -qO- https://raw.githubusercontent.com/chinayxc/Dedicated-Seedbox/main/Install.sh) -u sgws -p sgws6036 -c 1 -q 4.3.8 -l v1.2.19 -x -o 18080`
-       你可以用这个默认的,用户名sgws,密码sgws6036，端口18080，QB版本为4.3.8
+# 种子箱安装脚本
+## 举例
+`bash <(wget -qO- https://raw.githubusercontent.com/chinayxc/Dedicated-Seedbox/main/Install.sh) -u <username> -p <password> -c <缓存大小(unit:MiB最低1,之后安装完成建议调成-1)> -q <qBittorrent版本> -l <libtorrent版本> -b -v -r -3 -x -o`
+#### 选项
+	1. -u: username
+	2. -p: password
+	3. -c: Cache size for torrent client
+	4. -q: qBittorrent versions
+	5. -l: libtorrent versions
+	6. -b: Install autobrr    
+	7. -v: Install vertex     
+	8. -r: Install autoremove-torrents  
+	9. -3: Enable BBR V3    
+	10.-x: Enable BBRx      
+	11. Customize ports     
+##### 变量含义解释
+	1. username is sgws       #####用户名sgws
+	2. password is sgws6036   #####密码sgws6036
+	3. Cache size is 1         #####缓存为1M
+	4. Install qBittorrent 4.3.8 - libtorrent-v1.2.19   #####QB版本为14.3.8 内置LIB版本-v1.2.19 
+	5. Install autobrr    #####安装autobbr
+	6. Install autoremove-torrents  #####安装自动删种工具,外站常用
+	7. Enable BBRx   #####开启BBRx
+ #### 直接复制,即可食用
+ bash <(wget -qO- https://raw.githubusercontent.com/chinayxc/Dedicated-Seedbox/main/Install.sh) -u sgws -p sgws6036 -c 1 -q 4.3.8 -l v1.2.19 -x -o 18080
+       你可以用这个默认的,用户名sgws,密码sgws6036，端口18080，QB版本为4.3.8,安装好了可以自行去设置调整

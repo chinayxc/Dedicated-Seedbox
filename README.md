@@ -77,7 +77,7 @@ BBR Install - https://github.com/KozakaiAya/TCP_BBR
 	5. Install autobrr    #####安装autobbr
 	6. Install autoremove-torrents  #####安装自动删种工具,外站常用
 	7. Enable BBRx   #####开启BBRx
- #### 直接复制,即可食用
- ##### bash <(wget -qO- https://raw.githubusercontent.com/chinayxc/Dedicated-Seedbox/main/Install.sh) -u sgws -p sgws6036 -c 1 -q 4.3.8 -l v1.2.19 -x -o 18080
-       
-       你可以用这个默认的,用户名sgws,密码sgws6036，端口18080，QB版本为4.3.8,安装好了可以自行去设置调整，可以开刷了
+        8. -o    #####自定义端口
+ ##### 直接复制,即可食用
+ #### bash <(wget -qO- https://raw.githubusercontent.com/chinayxc/Dedicated-Seedbox/main/Install.sh) -u sgws -p sgws6036 -c 1 -q 4.3.8 -l v1.2.19 -x -o 18080     
+ ####你可以用这个默认的,用户名sgws,密码sgws6036，端口18080，QB版本为4.3.8,安装好了可以自行去设置调整，可以开刷了

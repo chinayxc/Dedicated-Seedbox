@@ -386,7 +386,7 @@ set_txqueuelen_
 # Check for Virtual Environment since some of the tunning might not work on virtual machine
 systemd-detect-virt > /dev/null
 if [ \$? -eq 0 ]; then
-	disable_tso_
+	:
 else
 	set_disk_scheduler_
 	set_ring_buffer_
